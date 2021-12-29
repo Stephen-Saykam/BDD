@@ -22,6 +22,7 @@ public class CreateOrg {
 		
 		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();
+//		System.out.println("browser opened");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 	}
@@ -37,7 +38,8 @@ public class CreateOrg {
 	@Then("Enter the un {string}")
 	public void enter_the_un(String un) {
 		
-		driver.findElement(By.name("user_name")).sendKeys(un);;
+		driver.findElement(By.name("user_name")).sendKeys(un);
+		System.out.println("User name is enterd");
 	    
 	}
 
